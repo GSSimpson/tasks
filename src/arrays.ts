@@ -1,4 +1,4 @@
-import { collapseTextChangeRangesAcrossMultipleVersions } from "typescript";
+//import { collapseTextChangeRangesAcrossMultipleVersions } from "typescript";
 
 /**
  * Consume an array of numbers, and return a new array containing
