@@ -7,7 +7,14 @@ import { collapseTextChangeRangesAcrossMultipleVersions } from "typescript";
  * the number twice.
  */
 export function bookEndList(numbers: number[]): number[] {
-    return numbers;
+    const bookEnds: number[] = [];
+    if (numbers.length === 0) {
+        return bookEnds;
+    } else {
+        bookEnds.push(numbers[0]);
+        bookEnds.push(numbers[numbers.length - 1]);
+    }
+    return bookEnds;
 }
 
 /**
