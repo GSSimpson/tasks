@@ -99,7 +99,17 @@ export function allRGB(colors: string[]): boolean {
  * And the array [] would become "0=0".
  */
 export function makeMath(addends: number[]): string {
-    return "";
+    const sum = addends.reduce(
+        (currentTotal: number, num: number) => currentTotal + num,
+        0
+    );
+    let math: string;
+    if (addends.length > 0) {
+        math = addends.join("+");
+    } else {
+        math = "0";
+    }
+    return sum + "=" + math;
 }
 
 /**
