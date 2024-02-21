@@ -1,3 +1,5 @@
+import { collapseTextChangeRangesAcrossMultipleVersions } from "typescript";
+
 /**
  * Consume an array of numbers, and return a new array containing
  * JUST the first and last number. If there are no elements, return
@@ -72,7 +74,11 @@ export function countShortWords(words: string[]): number {
  * then return true.
  */
 export function allRGB(colors: string[]): boolean {
-    return false;
+    const RGBOnly = colors.filter(
+        (color: string): boolean =>
+            color === "red" || color === "blue" || color === "green"
+    );
+    return colors.length === RGBOnly.length;
 }
 
 /**
