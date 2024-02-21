@@ -32,8 +32,7 @@ export function makeBlankQuestion(
  */
 export function isCorrect(question: Question, answer: string): boolean {
     return (
-        question.expected.trim().toLocaleLowerCase() ===
-        answer.trim().toLocaleLowerCase()
+        question.expected.trim().toLowerCase() === answer.trim().toLowerCase()
     );
 }
 
@@ -44,6 +43,18 @@ export function isCorrect(question: Question, answer: string): boolean {
  * be exactly one of the options.
  */
 export function isValid(question: Question, answer: string): boolean {
+    if (question.type === "short_answer_question") {
+        return true;
+    } else if (question.type === "multiple_choice_question") {
+        //check if answe is in question's options array
+        if (
+            question.options.some(
+                (option: string): boolean => option === answer
+            )
+        ) {
+            return true;
+        }
+    }
     return false;
 }
 
