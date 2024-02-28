@@ -244,18 +244,29 @@ export function editOption(
     targetOptionIndex: number,
     newOption: string
 ): Question[] {
-    /*
+    const targetQuestion = questions.findIndex(
+        (question: Question): boolean => question.id === targetId
+    );
+
+    let newOptions: string[];
+    if (targetOptionIndex === -1) {
+        newOptions = [...questions[targetQuestion].options, newOption];
+    } else {
+        newOptions = [...questions[targetQuestion].options];
+        newOptions[targetOptionIndex] = newOption;
+        //newOptions.splice(targetOptionIndex, 1, newOption);
+    }
+
     const newQuestions = questions.map(
         (question: Question): Question => ({
             ...question,
             options:
                 question.id === targetId
-                    ? questions.options.splice(targetOptionIndex, 0, newOption)
-                    : question.options
+                    ? [...newOptions]
+                    : [...question.options]
         })
     );
-    */
-    return [];
+    return newQuestions;
 }
 
 /***
