@@ -73,7 +73,7 @@ export function getNames(questions: Question[]): string[] {
  */
 export function sumPoints(questions: Question[]): number {
     const sum = questions.reduce(
-        (currentTotal: number, question, Question): number =>
+        (currentTotal: number, question: Question): number =>
             currentTotal + question.points,
         0
     );
@@ -88,7 +88,7 @@ export function sumPublishedPoints(questions: Question[]): number {
         (question: Question): boolean => question.published
     );
     const sum = published.reduce(
-        (currentTotal: number, question, Question): number =>
+        (currentTotal: number, question: Question): number =>
             currentTotal + question.points,
         0
     );
@@ -163,7 +163,10 @@ export function publishAll(questions: Question[]): Question[] {
  * are the same type. They can be any type, as long as they are all the SAME type.
  */
 export function sameType(questions: Question[]): boolean {
-    return false;
+    const oneType = questions.every(
+        (question: Question): boolean => question.type === questions[0].type
+    );
+    return oneType;
 }
 
 /***
