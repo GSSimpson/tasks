@@ -36,13 +36,10 @@ export function findQuestion(
     questions: Question[],
     id: number
 ): Question | null {
-    const contains = questions.some(
+    const foundQuestion = questions.find(
         (question: Question): boolean => question.id === id
     );
-    if (contains) {
-        const foundQuestion = questions.find(
-            (question: Question): boolean => question.id === id
-        );
+    if (foundQuestion) {
         return foundQuestion;
     } else {
         return null;
