@@ -12,29 +12,76 @@ Browserslist: caniuse-lite is outdated. Please run:
   npx browserslist@latest --update-db
   Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
 PASS src/objects.test.ts
-PASS src/nested.test.ts
 PASS src/arrays.test.ts
+PASS src/nested.test.ts
 PASS src/functions.test.ts
-PASS src/text.test.tsx
-PASS src/App.test.tsx
-PASS src/HtmlCss.test.tsx
-----------------|---------|----------|---------|---------|-------------------
-File            | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
-----------------|---------|----------|---------|---------|-------------------
-All files       |     100 |    98.14 |     100 |     100 |                   
- src            |     100 |    98.14 |     100 |     100 |                   
-  App.tsx       |     100 |      100 |     100 |     100 |                   
-  arrays.ts     |     100 |      100 |     100 |     100 |                   
-  functions.ts  |     100 |      100 |     100 |     100 |                   
-  nested.ts     |     100 |      100 |     100 |     100 |                   
-  objects.ts    |     100 |       90 |     100 |     100 | 48                
- src/interfaces |       0 |        0 |       0 |       0 |                   
-  answer.ts     |       0 |        0 |       0 |       0 |                   
-  question.ts   |       0 |        0 |       0 |       0 |                   
-----------------|---------|----------|---------|---------|-------------------
+PASS src/components/StartAttempt.test.tsx
+PASS src/components/TwoDice.test.tsx
+PASS src/components/ChangeType.test.tsx
+PASS src/components/CycleHoliday.test.tsx
+  ● Console
 
-Test Suites: 7 passed, 7 total
-Tests:       49 passed, 49 total
+    console.error
+      Warning: The tag <view> is unrecognized in this browser. If you meant to render a React component, start its name with an uppercase letter.
+          at view
+          at div
+          at CycleHoliday (/home/runner/work/tasks/tasks/src/components/CycleHoliday.tsx:50:35)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
+      at createElement (node_modules/react-dom/cjs/react-dom.development.js:9027:9)
+      at createInstance (node_modules/react-dom/cjs/react-dom.development.js:10192:20)
+      at completeWork (node_modules/react-dom/cjs/react-dom.development.js:19464:28)
+      at completeUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22812:16)
+      at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22787:5)
+      at workLoopSync (node_modules/react-dom/cjs/react-dom.development.js:22707:5)
+
+PASS src/components/RevealAnswer.test.tsx
+PASS src/components/Counter.test.tsx
+PASS src/App.test.tsx
+  ● Console
+
+    console.error
+      Warning: The tag <view> is unrecognized in this browser. If you meant to render a React component, start its name with an uppercase letter.
+          at view
+          at div
+          at CycleHoliday (/home/runner/work/tasks/tasks/src/components/CycleHoliday.tsx:50:35)
+          at div
+          at App
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
+      at createElement (node_modules/react-dom/cjs/react-dom.development.js:9027:9)
+      at createInstance (node_modules/react-dom/cjs/react-dom.development.js:10192:20)
+      at completeWork (node_modules/react-dom/cjs/react-dom.development.js:19464:28)
+      at completeUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22812:16)
+      at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22787:5)
+      at workLoopSync (node_modules/react-dom/cjs/react-dom.development.js:22707:5)
+
+-------------------|---------|----------|---------|---------|-------------------
+File               | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+-------------------|---------|----------|---------|---------|-------------------
+All files          |     100 |    98.91 |     100 |     100 |                   
+ src               |     100 |    98.14 |     100 |     100 |                   
+  App.tsx          |     100 |      100 |     100 |     100 |                   
+  arrays.ts        |     100 |      100 |     100 |     100 |                   
+  functions.ts     |     100 |      100 |     100 |     100 |                   
+  nested.ts        |     100 |      100 |     100 |     100 |                   
+  objects.ts       |     100 |       90 |     100 |     100 | 48                
+ src/components    |     100 |      100 |     100 |     100 |                   
+  ChangeType.tsx   |     100 |      100 |     100 |     100 |                   
+  Counter.tsx      |     100 |      100 |     100 |     100 |                   
+  CycleHoliday.tsx |     100 |      100 |     100 |     100 |                   
+  RevealAnswer.tsx |     100 |      100 |     100 |     100 |                   
+  StartAttempt.tsx |     100 |      100 |     100 |     100 |                   
+  TwoDice.tsx      |     100 |      100 |     100 |     100 |                   
+ src/interfaces    |       0 |        0 |       0 |       0 |                   
+  answer.ts        |       0 |        0 |       0 |       0 |                   
+  question.ts      |       0 |        0 |       0 |       0 |                   
+-------------------|---------|----------|---------|---------|-------------------
+
+Test Suites: 11 passed, 11 total
+Tests:       93 passed, 93 total
 Snapshots:   0 total
-Time:        4.017 s
+Time:        5.25 s
 Ran all test suites.
