@@ -56,7 +56,7 @@ export function CycleHoliday(): JSX.Element {
             <Button onClick={() => setHoliday(nextDate(holiday))}>
                 Advance by Year
             </Button>
-            <view>{render(holiday)}</view>
+            <h1>{render(holiday)}</h1>
         </div>
     );
 }
